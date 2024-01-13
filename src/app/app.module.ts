@@ -10,13 +10,15 @@ import { CardComponent } from './shared/card/card.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { BannerComponent } from './shared/banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
