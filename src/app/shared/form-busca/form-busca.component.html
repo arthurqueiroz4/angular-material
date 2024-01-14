@@ -38,6 +38,21 @@
                 <input matInput placeholder="Destino">
                 <mat-icon matSuffix>search</mat-icon>
             </mat-form-field>
+            <mat-form-field appearance="outline" class="input-container date-picker">
+                <mat-label>Data de ida</mat-label>
+                <input matInput [matDatepicker]="pickerIda" placeholder="Selecione">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="pickerIda"></mat-datepicker-toggle>
+                <mat-datepicker #pickerIda></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="input-container date-picker">
+                <mat-label>Data de volta</mat-label>
+                <input matInput [matDatepicker]="pickerVolta" placeholder="Selecione">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="pickerVolta"></mat-datepicker-toggle>
+                <mat-datepicker #pickerVolta></mat-datepicker>
+            </mat-form-field>
+            <button mat-flat-button color="primary">BUSCAR</button>
         </div>
     </form>
 
