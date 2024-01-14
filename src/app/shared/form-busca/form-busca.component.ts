@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-form-busca',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormBuscaComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
+  ngOnInit(){  }
 
-  ngOnInit(): void {
+  openDialog() {
+    console.log("Entroy");
+    const dialogRef = this.dialog.open(ModalComponent, {
+      width: '50%'
+    });
   }
-
 }

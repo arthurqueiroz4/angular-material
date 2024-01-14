@@ -10,12 +10,12 @@
                 <mat-button-toggle>SOMENTE IDA</mat-button-toggle>
             </mat-button-toggle-group>
 
-            <mat-chip-list aria-label="Seleção de passagens">
-                <mat-chip color="primary">
+            <mat-chip-list  aria-label="Seleção de passagens">
+                <mat-chip (click)="openDialog()" color="primary">
                     <mat-icon>check</mat-icon>
                     1 adulto
                 </mat-chip>
-                <mat-chip color="primary">
+                <mat-chip (click)="openDialog()" color="primary">
                     <mat-icon>check</mat-icon>
                     Econômica
                 </mat-chip>

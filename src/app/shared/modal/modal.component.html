@@ -1,0 +1,49 @@
+<section class="modal">
+    <h2 mat-dialog-title>Viajante</h2>
+    <mat-dialog-content class="mat-typography">
+    <div class="selecao-idade">
+        <ul>
+            <li>Adultos</li>
+            <li>(Acima de 12 anos)</li>
+            <li>
+                <app-botao-controle operador="decrementar"></app-botao-controle>
+                <span>1</span>
+                <app-botao-controle operador="incrementar"></app-botao-controle>
+            </li>
+        </ul>
+        <ul>
+            <li>Crianças</li>
+            <li>(Entre 2 e 11 anos)</li>
+            <li>
+                <app-botao-controle operador="decrementar"></app-botao-controle>
+                <span>1</span>
+                <app-botao-controle operador="incrementar"></app-botao-controle>
+            </li>
+        </ul>
+        <ul>
+            <li>Bebês</li>
+            <li>(Até 2 anos)</li>
+            <li>
+                <app-botao-controle operador="decrementar"></app-botao-controle>
+                <span>1</span>
+                <app-botao-controle operador="incrementar"></app-botao-controle>
+            </li>
+        </ul>
+        <div class="selecao-categoria">
+            <h2>Categorias</h2>
+            <mat-chip-list aria-label="Fish selection">
+                <mat-chip (click)="categoriaSelecionada = 'eco'">
+                    <mat-icon *ngIf="categoriaSelecionada === 'eco'">check</mat-icon>
+                    Econômica</mat-chip>
+                <mat-chip (click)="categoriaSelecionada = 'exec'">
+                    <mat-icon *ngIf="categoriaSelecionada === 'exec'">check</mat-icon>
+                    Executiva</mat-chip>
+            </mat-chip-list>
+        </div>
+    </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+    </mat-dialog-actions>
+</section>
